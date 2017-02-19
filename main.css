@@ -1,0 +1,71 @@
+/* Styles go here */
+*{
+  margin: 0px;
+  padding: 0px;
+  text-decoration: none;
+}
+/* Отступ сверху */
+#evil_name,.card,.amount,#hero_name,#func{
+  margin-top: 25px;
+}
+/* Границы */
+.card_evil,.card_hero,#amount_evil,#amount_hero,#win_evil, #win_hero,#more,#pass{
+  border: 1px solid black;
+}
+/* Карты */
+.card{
+  width: 310px;
+  height: 42px;
+  margin-left: 70px;
+}
+.card_evil,.card_hero{
+    width: 30px;
+  height: 40px;
+  float: left;
+  margin-left: 30px;
+}
+/* Имена */
+#evil_name,#hero_name{
+  margin-left: 300px;
+  width: 80px;
+   height: 20px;
+}
+/* Счетчики */
+.amount{
+  width: 455px;
+  margin-left: 100px;
+}
+.amount_name{
+  width: 50px;
+  height: 20px;
+  float: left;
+}
+#amount_evil,#amount_hero{
+  width: 200px;
+  height: 20px;
+  float: left;
+}
+#win_evil, #win_hero{
+  height: 20px;
+  width: 150px;
+  margin-left: 300px;
+}
+/* Возможности героя */
+#func{
+  width: 270px;
+  margin-left: 200px;
+}
+#more{
+  width: 80px;
+  height: 20px;
+  float: left;
+  background-color: white;
+  border-radius: 5px;
+}
+#pass{
+  height: 20px;
+  width: 80px;
+  margin-left: 100px;
+  background-color: white;
+  border-radius: 5px;
+}
