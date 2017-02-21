@@ -37,6 +37,22 @@ var doc = document,
     pass=doc.getElementById("pass");
 
 var rand_num = Randrand(monk);
+var i = 0, j = 0, k=0;
 
-card_evil[0].innerHTML = rand_num[0];
-card_hero[0].innerHTML = rand_num[1];
+card_evil[j].innerHTML = rand_num[i];
+i++;
+card_hero[k].innerHTML = rand_num[i];
+i++;
+j++;
+card_evil[j].innerHTML = rand_num[i];
+
+more.onclick = function () {
+  i++; k++;
+  card_hero[k].innerHTML = rand_num[i];
+  j++; i++;
+  card_evil[j].innerHTML = rand_num[i];
+}
+pass.onclick = function () {
+  i++; j++;
+  card_evil[j].innerHTML = rand_num[i];
+}
