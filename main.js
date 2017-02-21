@@ -37,4 +37,6 @@ var doc = document,
     pass=doc.getElementById("pass");
 
 var rand_num = Randrand(monk);
-alert(rand_num);
+
+card_evil[0].innerHTML = rand_num[0];
+card_hero[0].innerHTML = rand_num[1];
