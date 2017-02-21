@@ -14,7 +14,7 @@
 }
 /* Карты */
 .card{
-  width: 310px;
+  width: 380px;
   height: 42px;
   margin-left: 70px;
 }
@@ -46,6 +46,7 @@
   width: 200px;
   height: 20px;
   float: left;
+  text-align: center;
 }
 #win_evil, #win_hero{
   height: 20px;
