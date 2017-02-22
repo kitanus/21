@@ -52,7 +52,7 @@ amount_hero.innerHTML = hero_amount;
 i++; j++;
 evil_amount = evil_amount + rand_num[i];
 card_evil[j].innerHTML = rand_num[i];
-amount_evil.innerHTML = evil_amount;
+amount_evil.innerHTML = evil_amount - rand_num[0];
 // Если кликнешь по еще, то дадут карту тебе и противнику
 more.onclick = function () {
   i++; k++;
@@ -63,7 +63,7 @@ more.onclick = function () {
   j++; i++;
   evil_amount = evil_amount + rand_num[i];
   card_evil[j].innerHTML = rand_num[i];
-  amount_evil.innerHTML = evil_amount;
+  amount_evil.innerHTML = evil_amount - rand_num[0];
   }else{
     h=1;
   }
@@ -75,21 +75,19 @@ pass.onclick = function () {
   i++; j++;
   evil_amount = evil_amount + rand_num[i];
   card_evil[j].innerHTML = rand_num[i];
-  amount_evil.innerHTML = evil_amount;
+  amount_evil.innerHTML = evil_amount - rand_num[0];
   }else{
     h=1;
   }
   if(l == 1 && h == 1){
-  if(evil_amount < evil_amount){
+  if((evil_amount < hero_amount)  && (hero_amount < 22)){
     win_evil.innerHTML = "Поражение";
     win_hero.innerHTML = "Победа";
   }else{
     win_hero.innerHTML = "Поражение";
     win_evil.innerHTML = "Победа";
   }
-  for(var c = 0; c<5; c++){
-    card_evil[c].style.color = "black";
-  }
-  amount_evil.style.color = "black";
+    card_evil[0].style.color = "black";
+  amount_evil.innerHTML = evil_amount;
 }
 }
