@@ -1,4 +1,3 @@
-/* Styles go here */
 *{
   margin: 0px;
   padding: 0px;
@@ -17,6 +16,9 @@
   width: 380px;
   height: 42px;
   margin-left: 70px;
+}
+.card_evil{
+  color: white;
 }
 .card_evil,.card_hero{
     width: 30px;
@@ -42,6 +44,9 @@
   height: 20px;
   float: left;
 }
+#amount_evil{
+  color: white;
+}
 #amount_evil,#amount_hero{
   width: 200px;
   height: 20px;
@@ -52,6 +57,7 @@
   height: 20px;
   width: 150px;
   margin-left: 300px;
+  text-align: center;
 }
 /* Возможности героя */
 #func{
