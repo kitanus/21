@@ -1,3 +1,4 @@
+/* Styles go here */
 *{
   margin: 0px;
   padding: 0px;
@@ -17,7 +18,7 @@
   height: 42px;
   margin-left: 70px;
 }
-.card_evil{
+.card_evil:first-child{
   color: white;
 }
 .card_evil,.card_hero{
@@ -43,9 +44,6 @@
   width: 50px;
   height: 20px;
   float: left;
-}
-#amount_evil{
-  color: white;
 }
 #amount_evil,#amount_hero{
   width: 200px;
