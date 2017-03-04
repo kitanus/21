@@ -30,6 +30,20 @@ function Randrand(mond){
   return mond;
 }
 
+function stepEvil () {
+  i++; j++;
+  evil_amount = evil_amount + rand_num[i];
+card_evil[j].innerHTML = rand_num[i];
+card_evil[j].style.display = "block";
+}
+function stepHero () {
+  i++; k++;
+    hero_amount = hero_amount + rand_num[i];
+    card_hero[k].innerHTML = rand_num[i];
+    card_hero[k].style.display = "block";
+    amount_hero.innerHTML = hero_amount;
+}
+
 var doc = document,
     card_evil=doc.getElementsByClassName("card_evil"),
     card_hero=doc.getElementsByClassName("card_hero"),
@@ -41,34 +55,23 @@ var doc = document,
     pass=doc.getElementById("pass");
 
 var rand_num = Randrand(monk);
-var i = 0, j = 0, k=0, h=0, l=0, g=0;
+var i = -1, j = -1, k=-1, h=0, l=0, g=0;
 var evil_amount = 0, hero_amount = 0;
 
 // Вывод первых двух карт противника и одного героя
-evil_amount = rand_num[i];
-card_evil[j].innerHTML = rand_num[i];
-amount_evil.innerHTML = evil_amount;
-i++;
-hero_amount = rand_num[i];
-card_hero[k].innerHTML = rand_num[i];
-amount_hero.innerHTML = hero_amount;
-i++; j++;
-evil_amount = evil_amount + rand_num[i];
-card_evil[j].innerHTML = rand_num[i];
+stepEvil();
+amount_evil.innerHTML = evil_amount - rand_num[0];
+stepHero();
+stepEvil();
 amount_evil.innerHTML = evil_amount - rand_num[0];
 
 // Если кликнешь по еще, то дадут карту тебе и противнику
 more.onclick = function () {
   if(hero_amount < 22 && g === 0){
-    i++; k++;
-    hero_amount = hero_amount + rand_num[i];
-    card_hero[k].innerHTML = rand_num[i];
-    amount_hero.innerHTML = hero_amount;
+   stepHero();
   }
   if((evil_amount + rand_num[i+1]) < 22){
-    j++; i++;
-    evil_amount = evil_amount + rand_num[i];
-    card_evil[j].innerHTML = rand_num[i];
+    stepEvil();
     amount_evil.innerHTML = evil_amount - rand_num[0];
   }else{
     h=1;
@@ -79,9 +82,7 @@ more.onclick = function () {
 pass.onclick = function () {
   l=1;
   if((evil_amount + rand_num[i+1]) < 22){
-    i++; j++;
-    evil_amount = evil_amount + rand_num[i];
-    card_evil[j].innerHTML = rand_num[i];
+    stepEvil();
     amount_evil.innerHTML = evil_amount - rand_num[0];
   }else{
     h=1;
